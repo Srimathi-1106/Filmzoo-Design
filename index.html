@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmzoo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        /* Custom CSS for responsive size */
+        .screen {
+            height:13rem;
+            transition: height 0.1s ease;
+        }
+        @media (max-width: 1200px) {
+            .screen {
+                height: 30rem;
+            }
+        }
+        @media (max-width: 992px) {
+            .screen {
+                height: 25rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .screen {
+                height: 20rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .screen {
+                height: 15rem;
+            }
+        }
+    </style>
+</head>
+<body >
+    <div class="bg-black container-fluid">
+        <!--Navbar-->
+        <nav class="navbar ms-4 mx-lg-5 d-flex align-items-center">
+            <div class="w-100 d-flex align-items-center justify-items-between rounded-3">
+                <div class="col-8 col-lg-9 d-flex align-items-center">
+                    <i style="font-size:140%" class="me-4 fa-solid fa-bars text-white"></i>
+                    <a class="navbar-brand text-white fs-2 fw-bold">Flimzoo</a>
+                    <div class="mt-sm-2 bg-dark rounded-5 px-2  py-1 d-flex align-items-center" style="width:30rem;">
+                        <input class="d-none d-sm-flex rounded-5 p-2 bg-dark border-0" type="search" placeholder="Search this Blog" style="width:93%;">
+                        <a class="bg-dark border-0 rounded-5">
+                            <i class="fas fa-search text-secondary"></i>
+                        </a>
+                    </div>
+                    <i style="font-size:2rem;" class="mt-2 ms-2 text-primary fa-brands fa-discord"></i>
+                    <i style="font-size:2rem;" class="mt-2 ms-2 text-danger fa-brands fa-google-play"></i>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-1 p-3 py-sm-3 py-1 m-1 mt-2 m-sm-0 d-flex align-items-center justify-content-center bg-danger rounded-5">
+                    <a class="text-white mx-2"><i class="fa-solid fa-bookmark"><sup class="ms-1">0</sup></i></a> 
+                    <a class="d-none d-xxl-flex text-white mx-2"><i class="fa-solid fa-user"></i></a>
+                    <a class="d-none d-xxl-flex text-white mx-2"><i class="fa-solid fa-sliders"></i></a>
+                </div>
+            </div>
+        </nav>
+
+        
+        <div class="row d-flex mx-2">
+
+            <!--Left side-->
+            <div class="col-12 col-xl-9" >
+
+                <!-- Big frame-->
+                <div class="latest card p-0 m-0 border-0">
+                    <img src="https://images.hindustantimes.com/img/2022/04/13/550x309/beast-vijay_1649826006744_1649826014677.jpg" class="card-img-top img-cover" height="400px" alt="beast">
+                    <div class="card-body d-flex justify-content-between bg-danger">
+                        <h5 class="fs-2 text-white">Beast</h5>
+                        <button class="fs-5 rounded-5 px-4 border-0">Watch now</button>
+                    </div>
+                </div>
+                <!--Yellow section-->
+                <div class="bg-black">
+                    <p class="my-3 p-3 rounded-1" style="background:#fff3cd">Introducing "Flimzoo" - Your gateway to endless entertainment! Dive into a world of free, latest movies, and binge-worthy series, just like Netflix. Explore a vast library, in HD quality, with no subscription fees. FilmZoo, where cinematic magic meets your screen!
+                    </p>
+                </div>
+                <!-- movies section -->
+                <div>
+                    <div class="navbar d-flex justify-content-between align-items-center">
+                        <h4 class="fs-4 text-white">Recently Updated</h4>
+                        <div class="d-flex justify-content-between gap-20 text-secondary">
+                            <a class="nav-link me-2" href="#">All</a>
+                            <a class="nav-link me-2" href="#">Sub</a>
+                            <a class="nav-link me-2" href="#">Dub</a>
+                            <a class="nav-link me-2" href="#">Random</a>
+                            <a class="text-primary nav-link" href="#">More></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="d-flex justify-content-center row">
+                            <div class="card col-4 col-sm-3 col-md-2 me-md-4 me-lg-4 col-xxl-2 me-xxl-0 px-xxl-1 px-md-0 bg-black">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_uY2HmIhrwJ1CDnxa_K9ATY8n2VFHi6zb-fddkj84y_5ANqNgK0AeuYELgCbJ6A4pMwPJNt7_NSs35Hq9xggSMVSk9OKSKYBy_5M7rEs5-Tn8K4UNQTiKqO9j8dFUbq8QRXipZkl5Dc9nmF2qaBz1ck6Mv72JRQEeYk02T7AQM=w600" alt="HotSpot" class=" rounded-1 mb-2" style="object-fit: cover;" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 me-md-4 me-lg-4 me-xxl-0 col-xxl-2 px-xxl-1 px-md-0 bg-black">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" style="object-fit: cover;" alt="Super Saranya" class="rounded-1 mb-2" height="250rem"></a>
+                                <h6 class="text-center text-white">Super Saranya</h6>
+                            </div>
+                            <div class="card w-lg-75 w-md-150 col-4 col-sm-3 col-md-2 me-md-4 me-lg-4 me-xxl-0 px-md-0 col-xxl-2 px-xxl-1 bg-black">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_vQEu2h8GVU--aaw8x-bBbhcLZVi5BamzAwIIDFP669Mw4UsAjBha4YGbevej5wq2gj1oo8oSPNpXT22sy2LQZeP4ragFYWZ3CckvklfP7TsSUYMX9EY0QsQfTYXmScx7CcvLpziIppsZrJ96Q-vMYCyappWhm1Tg=w600" alt="HotSpot" class=" rounded-1 mb-2" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 col-xxl-2 px-xxl-1 me-md-4 me-lg-4 me-xxl-0 px-md-0 bg-black">
+                                <a href="#"><img width="100%"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIr3zHOb9bEhaXZ3bsnP5xX6XpKgRJbbrBaH0_o1fMhqrQIpaUDUmTtGvPqcxZuDy807buD8sxFopIXbkXFG-EouzLb6_qw-DvqA4qinHw-RipC2nees_Dh8KXxe-9rrKTe8FWeFTXCSgPyxvrockXvSl-qtib0yyqcDv05kK0zSbN-uph8wTZKP3P8WCM/w600/The%20truman%20show.jpeg" alt="HotSpot" class=" rounded-1 mb-2" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 col-xxl-2 me-md-4 px-xxl-1 me-xxl-0 px-md-0 bg-black">
+                                <a href="#"><img width="100%"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYPB-KehAI420sEdQaCteXfnl5pwhC7JTyQRqPNJSXg3nfuC_-0ehy7naPgsd0HaNW0gzaHGhmvbb5rZP9CcFf-IgEIzilhsq-vqQLLZgSLV-AhTs7_V6afZxCesDwNufI57TDRRnHFaEiTnFnq28CHWk0V7Au4cVX7g6LC4i3sQQn9mmk8LcGChDiPpgm/w600/ellien.jpg" alt="HotSpot" class="irounded-1 mb-2 me-1" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 me-md-4 col-md-2 col-xxl-2 px-xxl-1 px-md-0 me-xxl-0 bg-black">
+                                <a href="#"><img width="100%"  src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sc5UN3ITDEx6Wd8cyoPO2znjmIR_RSa2CN3zZVnUqyBNyxfyZnLVecK9bCB4JfgINKLPbrZ3dif6XOxoPukyNOrABJBkf3PuAGSeOx6MpKmjg2zOG0TnBNyeolLCifFYk6TXrjITHfrcmdEGKMPC5iBjL_vZOY1RHV5TZE90Mgs7Msh6JOMGcrSH4Oc_nKXTrLs9xRScKM2j4gtugEarLw=w600" alt="HotSpot" class="rounded-1 mb-2 me-1" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 me-md-4 me-lg-4 col-xxl-2 me-xxl-0 px-xxl-1 px-md-0 bg-black">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_uY2HmIhrwJ1CDnxa_K9ATY8n2VFHi6zb-fddkj84y_5ANqNgK0AeuYELgCbJ6A4pMwPJNt7_NSs35Hq9xggSMVSk9OKSKYBy_5M7rEs5-Tn8K4UNQTiKqO9j8dFUbq8QRXipZkl5Dc9nmF2qaBz1ck6Mv72JRQEeYk02T7AQM=w600" alt="HotSpot" class=" rounded-1 mb-2" style="object-fit: cover;" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 me-md-4 me-lg-4 me-xxl-0 col-xxl-2 px-xxl-1 px-md-0 bg-black">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" style="object-fit: cover;" alt="Super Saranya" class="rounded-1 mb-2" height="250rem"></a>
+                                <h6 class="text-center text-white">Super Saranya</h6>
+                            </div>
+                            <div class="card w-lg-75 w-md-150 col-4 col-sm-3 col-md-2 me-md-4 me-lg-4 me-xxl-0 px-md-0 col-xxl-2 px-xxl-1 bg-black">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_vQEu2h8GVU--aaw8x-bBbhcLZVi5BamzAwIIDFP669Mw4UsAjBha4YGbevej5wq2gj1oo8oSPNpXT22sy2LQZeP4ragFYWZ3CckvklfP7TsSUYMX9EY0QsQfTYXmScx7CcvLpziIppsZrJ96Q-vMYCyappWhm1Tg=w600" alt="HotSpot" class=" rounded-1 mb-2" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 col-xxl-2 px-xxl-1 me-md-4 me-lg-4 me-xxl-0 px-md-0 bg-black">
+                                <a href="#"><img width="100%"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIr3zHOb9bEhaXZ3bsnP5xX6XpKgRJbbrBaH0_o1fMhqrQIpaUDUmTtGvPqcxZuDy807buD8sxFopIXbkXFG-EouzLb6_qw-DvqA4qinHw-RipC2nees_Dh8KXxe-9rrKTe8FWeFTXCSgPyxvrockXvSl-qtib0yyqcDv05kK0zSbN-uph8wTZKP3P8WCM/w600/The%20truman%20show.jpeg" alt="HotSpot" class=" rounded-1 mb-2" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 col-xxl-2 me-md-4 px-xxl-1 me-xxl-0 px-md-0 bg-black">
+                                <a href="#"><img width="100%"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYPB-KehAI420sEdQaCteXfnl5pwhC7JTyQRqPNJSXg3nfuC_-0ehy7naPgsd0HaNW0gzaHGhmvbb5rZP9CcFf-IgEIzilhsq-vqQLLZgSLV-AhTs7_V6afZxCesDwNufI57TDRRnHFaEiTnFnq28CHWk0V7Au4cVX7g6LC4i3sQQn9mmk8LcGChDiPpgm/w600/ellien.jpg" alt="HotSpot" class="irounded-1 mb-2 me-1" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 me-md-4 col-md-2 col-xxl-2 px-xxl-1 px-md-0 me-xxl-0 bg-black">
+                                <a href="#"><img width="100%"  src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sc5UN3ITDEx6Wd8cyoPO2znjmIR_RSa2CN3zZVnUqyBNyxfyZnLVecK9bCB4JfgINKLPbrZ3dif6XOxoPukyNOrABJBkf3PuAGSeOx6MpKmjg2zOG0TnBNyeolLCifFYk6TXrjITHfrcmdEGKMPC5iBjL_vZOY1RHV5TZE90Mgs7Msh6JOMGcrSH4Oc_nKXTrLs9xRScKM2j4gtugEarLw=w600" alt="HotSpot" class="rounded-1 mb-2 me-1" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 me-md-4 me-lg-4 col-xxl-2 me-xxl-0 px-xxl-1 px-md-0 bg-black">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_uY2HmIhrwJ1CDnxa_K9ATY8n2VFHi6zb-fddkj84y_5ANqNgK0AeuYELgCbJ6A4pMwPJNt7_NSs35Hq9xggSMVSk9OKSKYBy_5M7rEs5-Tn8K4UNQTiKqO9j8dFUbq8QRXipZkl5Dc9nmF2qaBz1ck6Mv72JRQEeYk02T7AQM=w600" alt="HotSpot" class=" rounded-1 mb-2" style="object-fit: cover;" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 me-md-4 me-lg-4 me-xxl-0 col-xxl-2 px-xxl-1 px-md-0 bg-black">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" style="object-fit: cover;" alt="Super Saranya" class="rounded-1 mb-2" height="250rem"></a>
+                                <h6 class="text-center text-white">Super Saranya</h6>
+                            </div>
+                            <div class="card w-lg-75 w-md-150 col-4 col-sm-3 col-md-2 me-md-4 me-lg-4 me-xxl-0 px-md-0 col-xxl-2 px-xxl-1 bg-black">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_vQEu2h8GVU--aaw8x-bBbhcLZVi5BamzAwIIDFP669Mw4UsAjBha4YGbevej5wq2gj1oo8oSPNpXT22sy2LQZeP4ragFYWZ3CckvklfP7TsSUYMX9EY0QsQfTYXmScx7CcvLpziIppsZrJ96Q-vMYCyappWhm1Tg=w600" alt="HotSpot" class=" rounded-1 mb-2" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 col-xxl-2 px-xxl-1 me-md-4 me-lg-4 me-xxl-0 px-md-0 bg-black">
+                                <a href="#"><img width="100%"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhIr3zHOb9bEhaXZ3bsnP5xX6XpKgRJbbrBaH0_o1fMhqrQIpaUDUmTtGvPqcxZuDy807buD8sxFopIXbkXFG-EouzLb6_qw-DvqA4qinHw-RipC2nees_Dh8KXxe-9rrKTe8FWeFTXCSgPyxvrockXvSl-qtib0yyqcDv05kK0zSbN-uph8wTZKP3P8WCM/w600/The%20truman%20show.jpeg" alt="HotSpot" class=" rounded-1 mb-2" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 col-md-2 col-xxl-2 me-md-4 px-xxl-1 me-xxl-0 px-md-0 bg-black">
+                                <a href="#"><img width="100%"  src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYPB-KehAI420sEdQaCteXfnl5pwhC7JTyQRqPNJSXg3nfuC_-0ehy7naPgsd0HaNW0gzaHGhmvbb5rZP9CcFf-IgEIzilhsq-vqQLLZgSLV-AhTs7_V6afZxCesDwNufI57TDRRnHFaEiTnFnq28CHWk0V7Au4cVX7g6LC4i3sQQn9mmk8LcGChDiPpgm/w600/ellien.jpg" alt="HotSpot" class="irounded-1 mb-2 me-1" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="card col-4 col-sm-3 me-md-4 col-md-2 col-xxl-2 px-xxl-1 px-md-0 me-xxl-0 bg-black">
+                                <a href="#"><img width="100%"  src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_sc5UN3ITDEx6Wd8cyoPO2znjmIR_RSa2CN3zZVnUqyBNyxfyZnLVecK9bCB4JfgINKLPbrZ3dif6XOxoPukyNOrABJBkf3PuAGSeOx6MpKmjg2zOG0TnBNyeolLCifFYk6TXrjITHfrcmdEGKMPC5iBjL_vZOY1RHV5TZE90Mgs7Msh6JOMGcrSH4Oc_nKXTrLs9xRScKM2j4gtugEarLw=w600" alt="HotSpot" class="rounded-1 mb-2 me-1" height="250rem"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side-->
+            <div class="col-12 col-xl-3 ">
+
+                <!--Filter section-->
+                <div class="me-2 card bg-dark p-3" style="height:fit-content;">
+                    <h4 class="text-white m-2">Filter</h4>
+                    <div class="d-flex justify-content-center mx-3">
+                        <button class="col-6 border-0 text-center rounded-2 m-2" style="background-color: #343434;"><span class="text-secondary">Genre </span><span class="text-white">All</span></button>
+                        <button class="col-6 border-0 text-center rounded-2 m-2" style="background-color: #343434;"><span class="text-secondary">Genre </span><span class="text-white">All</span></button>
+                    </div>
+                    <div class="d-flex justify-content-center mx-3">
+                        <button class="col-6 border-0 text-center rounded-2 m-2" style="background-color: #343434;"><span class="text-secondary">Genre </span><span class="text-white">All</span></button>
+                        <button class="col-6 border-0 text-center rounded-2 m-2" style="background-color: #343434;"><span class="text-secondary">Genre </span><span class="text-white">All</span></button>
+                    </div>
+                    <div class="d-flex justify-content-center mx-3">
+                        <button class="col-6 border-0 text-center rounded-2 m-2" style="background-color: #343434;"><span class="text-secondary">Genre </span><span class="text-white">All</span></button>
+                        <button class="col-6 border-0 text-center rounded-2 m-2" style="background-color: #343434;"><span class="text-secondary">Genre </span><span class="text-white">All</span></button>
+                    </div>
+                    <div class="row m-2">
+                        <input class="bg-dark rounded-1" style="border:rgb(64, 64, 64) 1px solid;" type="search" placeholder="Search this blog">
+                    </div>
+                    <div class="row m-2"><button class="bg-danger rounded-1 border-0"><i class="fa-solid fa-filter"></i>Filter</button></div>
+                </div>
+                
+                <!-- Trending section -->
+                <div class="bg-dark my-3 rounded-2">
+                    <h4 class="text-white p-2 m-2 mb-3">Trending</h4>
+                    
+                    <div class="screen" style="position:relative; 
+                    background-image:url('https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w500');background-size: cover;
+                    background-repeat: no-repeat; box-shadow:inset 0px -60px 60px black;
+                    "> 
+                        <div class="p-2 pt-3 m-1"><button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-white text-dark">1</button></div>
+                        <div class=" ms-5" style="position:absolute; bottom:2px;">
+                            <div class="ms-4">
+                            <p class="mb-0 mt-4" style="color: #ffffff;">Super Saranya</p>
+                            <span class="text-white "><i class="fa-solid fa-heart"></i> 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--Trending-2 to Trending-10-->
+                    <div class="p-2">
+
+                        <!--1st Pair-->
+                        <div class="row d-flex">
+
+                            <!--Trending 2-->
+                            <div class="d-flex col-12 col-sm-6 col-xl-12 ms-2 mb-2 flex-start align-items-center gap-2">
+                                <button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-dark text-white">2</button>
+                                <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" alt="Super Saranya" width="60rem" height="80rem" style="object-fit:contain;">
+                                <div>
+                                    <p class="text-secondary me-1">Super Saranya</p>
+                                    <span class="text-secondary"><i class="fa-solid fa-heart"></i> 0</span>
+                                </div>
+                            </div>
+
+                            <!--Trending 3-->
+                            <div class="d-flex col-12 col-sm-5 col-xl-12 ms-2 mb-2 flex-start align-items-center gap-2">
+                                <button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-dark text-white">3</button>
+                                <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" alt="Super Saranya" width="60rem" height="80rem" style="object-fit:contain;">
+                                <div>
+                                    <p class="text-secondary me-1">Super Saranya</p>
+                                    <span class="text-secondary"><i class="fa-solid fa-heart"></i> 0</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--2nd Pair-->
+                        <div class="row d-flex">
+
+                            <!--Trending 3-->
+                            <div class="d-flex col-12 col-sm-6 col-xl-12 ms-2 mb-2 flex-start align-items-center gap-2">
+                                <button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-dark text-white">4</button>
+                                <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" alt="Super Saranya" width="60rem" height="80rem" style="object-fit:contain;">
+                                <div>
+                                    <p class="text-secondary me-1">Super Saranya</p>
+                                    <span class="text-secondary"><i class="fa-solid fa-heart"></i> 0</span>
+                                </div>
+                            </div>
+
+                            <!--Trending 4-->
+                            <div class="d-flex col-12 col-sm-5 col-xl-12 ms-2 mb-2 flex-start align-items-center gap-2">
+                                <button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-dark text-white">5</button>
+                                <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" alt="Super Saranya" width="60rem" height="80rem" style="object-fit:contain;">
+                                <div>
+                                    <p class="text-secondary me-1">Super Saranya</p>
+                                    <span class="text-secondary"><i class="fa-solid fa-heart"></i> 0</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--3rd Pair-->
+                        <div class="row d-flex">
+
+                            <!--Trending 6-->
+                            <div class="d-flex col-12 col-sm-6 col-xl-12 ms-2 mb-2 flex-start align-items-center gap-2">
+                                <button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-dark text-white">6</button>
+                                <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" alt="Super Saranya" width="60rem" height="80rem" style="object-fit:contain;">
+                                <div>
+                                    <p class="text-secondary me-1">Super Saranya</p>
+                                    <span class="text-secondary"><i class="fa-solid fa-heart"></i> 0</span>
+                                </div>
+                            </div>
+
+                            <!--Trending 7-->
+                            <div class="d-flex col-12 col-sm-5 col-xl-12 ms-2 mb-2 flex-start align-items-center gap-2">
+                                <button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-dark text-white">7</button>
+                                <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" alt="Super Saranya" width="60rem" height="80rem" style="object-fit:contain;">
+                                <div>
+                                    <p class="text-secondary me-1">Super Saranya</p>
+                                    <span class="text-secondary"><i class="fa-solid fa-heart"></i> 0</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--4th Pair-->
+                        <div class="row d-flex">
+
+                            <!--Trending 8-->
+                            <div class="d-flex col-12 col-sm-6 col-xl-12 ms-2 mb-2 flex-start align-items-center gap-2">
+                                <button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-dark text-white">8</button>
+                                <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" alt="Super Saranya" width="60rem" height="80rem" style="object-fit:contain;">
+                                <div>
+                                    <p class="text-secondary me-1">Super Saranya</p>
+                                    <span class="text-secondary"><i class="fa-solid fa-heart"></i> 0</span>
+                                </div>
+                            </div>
+
+                            <!--Trending 9-->
+                            <div class="d-flex col-12 col-sm-5 col-xl-12 ms-2 mb-2 flex-start align-items-center gap-2">
+                                <button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-dark text-white">9</button>
+                                <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" alt="Super Saranya" width="60rem" height="80rem" style="object-fit:contain;">
+                                <div>
+                                    <p class="text-secondary me-1">Super Saranya</p>
+                                    <span class="text-secondary"><i class="fa-solid fa-heart"></i> 0</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!--5th Pair-->
+                        <div class="row d-flex">
+
+                            <!--Trending 10-->
+                            <div class="d-flex col-12 col-sm-6 col-lg-12 ms-2 mb-2 flex-start align-items-center gap-2">
+                                <button style="width:3rem; height:3rem; font-size: 2rem; border:rgb(64, 64, 64) 1px solid;" class="p-0 m-0 bg-dark text-white">10</button>
+                                <img src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_tZ8C1tcAIXKNZo6dUSOPFu-WBrblAYIbT8SALqGrly5wNMMlKf0csHDMC3zPXsZ_j3sMAbzK8LpGgenxFkckHwnGItdO4VC1gVKVf9h8eT7mYaUbrBvSutu_kh9A6m0VroJQGKwQs7GxL48xha8SVO9oW4UM5mspaa_mhTayByEKbUOAoGXZeFAP7ZtGjW8nnwZIQszqPr14e1PrBku9Wy-1rqstR0jjRYzglR9ezrMMFGvUsKKo7IHEaw2AhxHf2MXt9yYsbxVNDwXCrAN4aPdmFXo-ibhdxHohZtwV2pRabP8pVSL6rEvMZFBPYrrPT8NJOZ4w1bV2xU8tdr5HXvFQ=w600" alt="Super Saranya" width="60rem" height="80rem" style="object-fit:contain;">
+                                <div>
+                                    <p class="text-secondary me-1">Super Saranya</p>
+                                    <span class="text-secondary"><i class="fa-solid fa-heart"></i> 0</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--Updates-->
+                <div class="bg-dark rounded-1 px-2">
+                    <div class="d-flex justify-content-between text-secondary align-items-center m-2">
+                        <div>
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <div class="navbar d-flex justify-content-between gap-2">
+                            <a href="#" class="nav-link text-white">Action</a>
+                            <a href="#" class="nav-link">Fantasy</a>
+                            <a href="#" class="nav-link">Thriller</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="row d-flex align-items-center my-2 p-0" >
+                            <div class="col-4">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_uY2HmIhrwJ1CDnxa_K9ATY8n2VFHi6zb-fddkj84y_5ANqNgK0AeuYELgCbJ6A4pMwPJNt7_NSs35Hq9xggSMVSk9OKSKYBy_5M7rEs5-Tn8K4UNQTiKqO9j8dFUbq8QRXipZkl5Dc9nmF2qaBz1ck6Mv72JRQEeYk02T7AQM=w600" alt="HotSpot" class=" rounded-1 " style="object-fit: cover;" height="150px"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="col-4">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_uY2HmIhrwJ1CDnxa_K9ATY8n2VFHi6zb-fddkj84y_5ANqNgK0AeuYELgCbJ6A4pMwPJNt7_NSs35Hq9xggSMVSk9OKSKYBy_5M7rEs5-Tn8K4UNQTiKqO9j8dFUbq8QRXipZkl5Dc9nmF2qaBz1ck6Mv72JRQEeYk02T7AQM=w600" alt="HotSpot" class=" rounded-1" style="object-fit: cover;" height="150px"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                            <div class="col-4">
+                                <a href="#"><img width="100%" src="https://lh3.googleusercontent.com/blogger_img_proxy/AEn0k_uY2HmIhrwJ1CDnxa_K9ATY8n2VFHi6zb-fddkj84y_5ANqNgK0AeuYELgCbJ6A4pMwPJNt7_NSs35Hq9xggSMVSk9OKSKYBy_5M7rEs5-Tn8K4UNQTiKqO9j8dFUbq8QRXipZkl5Dc9nmF2qaBz1ck6Mv72JRQEeYk02T7AQM=w600" alt="HotSpot" class=" rounded-1 " style="object-fit: cover;" height="150px"></a>
+                                <h6 class="text-center text-white">Hot Spot</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="p-3 bg-dark" style="color:#c9c9c9">
+        <div class="row">
+            <p><b>A-Z List</b> | Searching anime order by alphabet name A to Z.</p>
+            <div class="text-secondary">
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">A</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">B</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">C</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">D</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">E</Emb></button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">F</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">G</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">H</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">I</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">J</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">K</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">L</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">M</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">N</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">O</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">P</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">Q</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">R</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">S</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">T</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">U</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">V</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">W</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">X</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">Y</button>
+                <button class="border-0 me-1 mb-1" style="background-color: #343434; color:#c9c9c9">Z</button>
+
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="text-center text-md-start col-md-8 col-12  mb-4">
+                <h1>Filmzoo</h1>
+                <p>Filmzoo is your ultimate destination for the latest in technology.</p>
+                <p>Copyright &copy; 2024 Filmzoo. All Rights Reserved</p>
+                <div class="text-primary">
+                    <i class="me-2 fa-brands fa-facebook"></i>
+                    <i class="me-2 fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-discord"></i>
+                </div>
+            </div>
+            
+            <div class="text-center text-md-start col-md-2 col-6 mb-3">
+                <h5 class="text-white">Links</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">A-Z List</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Upcoming</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Most Requested</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">DarkMode</a></li>
+                </ul>
+            </div>
+        
+            <div class="text-center text-md-start col-6 col-md-2 mb-3">
+                <h5 class="text-white">Help</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Contact</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">FAQ</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-secondary">Request</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+   
+</body>
+</html>
